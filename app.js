@@ -63,3 +63,18 @@ const galleryItems = [
     description: 'Lighthouse Coast Sea',
   },
 ];
+
+
+// получаем доступ к элементам
+
+
+const modalWindowRefs = {
+  lightboxRef:document.querySelector('.lightbox'),
+  lightboxOverlayRef: document.querySelector('.lightbox__overlay'),
+  lightboxImageRef: document.querySelector('.lightbox__image'),
+  lightboxContentRef: document.querySelector('.lightbox__content'),
+  lightboxButtonCloseRef:document.querySelector('.lightbox__button')
+  
+}
+
+console.log(modalWindowRefs.lightboxOverlayRef);
