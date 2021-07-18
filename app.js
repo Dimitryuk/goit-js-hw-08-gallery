@@ -108,24 +108,29 @@ function onModalOpen() {
   modalWindowRefs.lightboxImageRef.src =
     event.target.getAttribute("data-source");
   modalWindowRefs.lightboxImageRef.alt = event.target.getAttribute("alt");
+  modalWindowRefs.lightboxButtonCloseRef.addEventListener(
+    "click",
+    onModalClose
+  );
+  window.addEventListener("keydown", onEscPressClose);
 }
-
-// закрытие модалки по кнопке
-modalWindowRefs.lightboxButtonCloseRef.addEventListener("click", onModalClose);
 
 function onModalClose(event) {
   modalWindowRefs.lightboxRef.classList.remove("is-open");
+  window.removeEventListener("keydown", onEscPressClose);
+  modalWindowRefs.lightboxImageRef.src = " ";
+  modalWindowRefs.lightboxImageRef.alt = " ";
 }
+// закрытие модалки по кнопке
+modalWindowRefs.lightboxButtonCloseRef.addEventListener("click", onModalClose);
 
 // Закрытие по клику на оверлей
-modalWindowRefs.lightboxOverlayRef.addEventListener("click", onOverlayClick);
-
-function onOverlayClick() {
-  modalWindowRefs.lightboxRef.classList.remove("is-open");
-}
+modalWindowRefs.lightboxOverlayRef.addEventListener("click", onModalClose);
 
 //Закрытие модалки по нажатию на Эскейп
-window.addEventListener("keydown", onEscPressClose);
+
 function onEscPressClose(event) {
-  modalWindowRefs.lightboxRef.classList.remove("is-open");
+  if (event.code === "Escape") {
+    onModalClose();
+  }
 }
