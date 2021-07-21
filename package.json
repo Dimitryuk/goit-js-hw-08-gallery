@@ -1,0 +1,25 @@
+{
+  "name": "goit-js-hw-08-gallery",
+  "version": "1.0.0",
+  "description": "Критерии приема\r Создан репозиторий goit-js-hw-08-gallery.\r При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую страницу на GitHub pages.\r При посещении рабочей страницы (GitHub pages) задания, в консоли нету ошибок и предупреждений.\r Имена переменных и функций понятные, описательные.\r Код отформатирован с помощью Prettier.\r Задание\r Создай галерею с возможностью клика по ее элементам и просмотра полноразмерного изображения в модальном окне. Превью результата посмотри по ссылке.",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+       "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dimitryuk/goit-js-hw-08-gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dimitryuk/goit-js-hw-08-gallery/issues"
+  },
+  "homepage": "https://github.com/Dimitryuk/goit-js-hw-08-gallery#readme"
+}

@@ -66,7 +66,7 @@ const galleryItems = [
 
 // получаем доступ к элементам
 
-const modalWindowRefs = {
+ const modalWindowRefs = {
   lightboxRef: document.querySelector(".lightbox"),
   lightboxOverlayRef: document.querySelector(".lightbox__overlay"),
   lightboxImageRef: document.querySelector(".lightbox__image"),
@@ -79,7 +79,7 @@ console.log(modalWindowRefs.galleryRef);
 
 //Создаем элементы коллекции
 
-const galleryMarkup = galleryItems
+ const galleryMarkup = galleryItems
   .map(
     ({ preview, original, description }) =>
       `<li class="gallery__item">
@@ -89,6 +89,8 @@ const galleryMarkup = galleryItems
   .join("");
 
 modalWindowRefs.galleryRef.innerHTML = galleryMarkup;
+
+
 
 //console.log(galleryMarkup);
 
